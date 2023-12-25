@@ -1,0 +1,125 @@
+:root {
+    --primary-color: #1322BE;
+    --dark-text-color: #313131;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #f9f9f9;
+}
+
+.logo {
+    height: 2.5rem;
+}
+
+nav {
+    background-color: #ffffff;
+    padding: 5px 16px;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 1px 1px 10px #e0e0e0;
+}
+.nav-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav-list{
+    list-style: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    padding: 0 20px;
+    overflow: hidden;
+    background: #ffffff;
+    height: 0px;
+    transition: all 0.33s;
+}
+
+.dropbtn, .animate-nav-toggle {
+    display: block;
+    width: 40px;
+    padding: 5px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: all 0.33s;
+}
+.dropbtn span, .animate-nav-toggle span {
+    width: 100%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: #4e4e4e;
+    display: block;
+}
+
+.dropbtn span:nth-child(2), .animate-nav-toggle span:nth-child(2) {
+    margin: 6px 0;
+}
+
+
+
+.animate-nav-toggle span:nth-child(1) {
+    transition: all 0.33s;
+    transform-origin: center left;
+    transform: rotate(36deg);
+}
+.animate-nav-toggle span:nth-child(3) {
+    transition: all 0.33s;
+    transform-origin: center left;
+    transform: rotate(-36deg);
+}
+.animate-nav-toggle span:nth-child(2) {
+    transition: width 0.33s;
+    width: 0;
+}
+.dropbtn span:nth-child(1) {
+    transition: all 0.33s;
+    transform-origin: center left;
+    transform: rotate(0deg);
+}
+.dropbtn span:nth-child(3) {
+    transition: all 0.33s;
+    transform-origin: center left;
+    transform: rotate(-0deg);
+}
+.dropbtn span:nth-child(2) {
+    transition: width 0.33s;
+    width: 100%;
+}
+
+
+.nav-list li a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: var(--dark-text-color);
+    padding: 10px 20px;
+    margin-bottom: 5px;
+    transition: all 0.33s;
+}
+
+.nav-list li a:hover {
+    background-color: #1321be23;
+}
+.nav-list li a:focus {
+    background-color: #1321be23;
+}
+
+.active-navbar {
+    height: 200px;
+    border-top: 1px 0 1px 0 solid #eeeeee;
+    padding: 10px 20px;
+    opacity: 1;
+}
